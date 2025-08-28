@@ -18,7 +18,7 @@ const DropdownLinks = [
   { id: 3, name: "Top Rated", link: "/#" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ setOrderPopup }) => {
   return (
     <div className="bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-white duration-200 relative z-40">
       {/* upper navbar */}
@@ -64,7 +64,7 @@ const Navbar = () => {
 
           {/* order button */}
           <button
-            onClick={() => alert("ordering not available yet")}
+            onClick={() => setOrderPopup(true)}
             className="ml-4 px-4 py-2 rounded-full bg-gradient-to-r from-gray-400 to-gray-600 text-white hover:scale-110 transition shadow-lg"
           >
             <FaCartShopping />
